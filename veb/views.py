@@ -6,3 +6,6 @@ def about(request):
 def home(request):
     #return HttpResponse('home')
      return render(request,'home.html')
+
+
+
