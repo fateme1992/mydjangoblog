@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
+  <h2> <a href="{% url 'articles:list' %} ">logo</a></h2>
+  <nav>
+      <ul>
+          <li>
+              <form class="logout_link" action="{% url 'accounts:logout' %}" method="POST">
+                  {% csrf_token %}
+                  <button type="submit">logout</button>
+
+              </form>
+          </li>
+      </ul>
+  </nav>
     <div class="wrapper">
 
     {% block content %}
